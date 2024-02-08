@@ -1,11 +1,18 @@
+"use client"
+
 import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import styles from "@/app/ui/home.module.css"
 import { lustiana } from './ui/fonts';
 import Image from 'next/image';
+// import { setValue } from '@/redux/features/authSlice';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { AppDispatch, useAppSelector } from '@/redux/store';
 
 export default function Page() {
+  // const dispatch = useDispatch<AppDispatch>()
+  // const value = useAppSelector(state => state.authReducer.value)
   return (
     <main className="flex min-h-screen flex-col p-6">
       <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
@@ -34,6 +41,9 @@ export default function Page() {
           <Image src="/hero-mobile.png" width={560} height={620} className="sm:block md:hidden " alt='nejse mobile' />
         </div>
       </div>
+      {/* <button onClick={() => dispatch(setValue("Hello Word"))}>
+        CLICK ME
+      </button> */}
     </main>
   );
 }
